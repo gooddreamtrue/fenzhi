@@ -1,21 +1,28 @@
+<style>
+	.vui-tab{width:500px;border:1px solid #ccc;}
+	.vui-tab-btn-on{color:red;font-weight:bold;}
+	.vui-tab-item{display:none;}
+	.vui-tab-item-on{display:block;}
+</style>
 <div class="head">
 	head
 </div>
 <div class="body">
 	body
 </div>
+<script src="../master/jquery.js"></script>
 <script>
 
 	alert(11)
 	console.log(11);
 </script>
 <div class="vui-tab">
-	<div class="vui-tab-head">
-		<a href="javascript:void(0);" class="vui-tab-btn">tab-1</a>
+	<div class="vui-tab-head"> 
+		<a href="javascript:void(0);" class="vui-tab-btn vui-tab-btn-on">tab-1</a>
 		<a href="javascript:void(0);" class="vui-tab-btn">tab-2</a>
 	</div>  
 	<div class="vui-tab-body">
-		<div class="vui-tab-item">1</div>
+		<div class="vui-tab-item vui-tab-item-on">1</div>
 		<div class="vui-tab-item">2</div>
 	</div>
 </div>
@@ -23,7 +30,7 @@
 	$(".vui-tab .vui-tab-head .vui-tab-btn").on("click",function(){
 		$(this).addClass("vui-tab-btn-on").siblings().removeClass("vui-tab-btn-on");
 		var index = $(this).index();
-		$(".vui-tab-item").eq(index).addClass("on").siblings().removeClass("on");
+		$(".vui-tab-item").eq(index).addClass("vui-tab-item-on").siblings().removeClass("vui-tab-item-on");
 	})
 
 </script>
