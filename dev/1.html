@@ -23,6 +23,7 @@
 	$(".vui-tab .vui-tab-head .vui-tab-btn").on("click",function(){
 		$(this).addClass("vui-tab-btn-on").siblings().removeClass("vui-tab-btn-on");
 		var index = $(this).index();
+		$(".vui-tab-item").eq(index).addClass("on").siblings().removeClass("on");
 	})
 
 </script>
